@@ -16,12 +16,12 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
-          path="/"
+          path="/*"
           element={
             <PrivateRoute>
               <Layout>
                 <Routes>
-                  <Route index element={<Dashboard />} />
+                  <Route path="/" element={<Dashboard />} />
                   <Route path="tasks" element={<Tasks />} />
                   <Route path="teams" element={<Teams />} />
                   <Route path="settings" element={<Settings />} />
